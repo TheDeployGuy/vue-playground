@@ -1,26 +1,9 @@
 <template>
-  <div class="navbar">
-    <nav class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Vue Playground</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-  </div>
+<ul class="nav nav-sidebar">
+  <li><router-link to="/">Home</router-link></li>
+  <li><router-link to="/about">About</router-link></li>
+  <li><router-link to="/contact">Contact</router-link></li>
+</ul>
 </template>
 
 <script>
@@ -36,5 +19,24 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .nav-sidebar > li > a {
+    font-size: 20px !important;
+  }
 
+    /* Sidebar navigation */
+  .nav-sidebar {
+    margin-right: -21px; /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: -20px;
+  }
+  .nav-sidebar > li > a {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .nav-sidebar > .active > a,
+  .nav-sidebar > .active > a:hover,
+  .nav-sidebar > .active > a:focus {
+    color: #fff;
+    background-color: #428bca;
+  }
 </style>
