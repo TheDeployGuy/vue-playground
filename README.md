@@ -2,6 +2,10 @@
 
 > My Vue.js playground to mess around with it
 
+## Useful links
+
+[Bootstrap Sidebar implementation](http://getbootstrap.com/examples/dashboard/)
+
 ## Build Setup
 
 ``` bash
