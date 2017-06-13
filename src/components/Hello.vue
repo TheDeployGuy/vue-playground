@@ -1,15 +1,17 @@
 <template>
   <div class="hello">
     <h1 class="page-header">{{ msg }}</h1>
+    <p> God said: {{ id }}</p>
   </div>
 </template>
 
 <script>
 export default {
+  props: ['id'],
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App.'
     }
   }
 }

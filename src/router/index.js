@@ -11,16 +11,20 @@ export default new Router({
     {
       path: '/',
       name: 'Hello',
-      component: Hello
+      component: Hello,
+      children: [
+
+      ],
+      props: {
+        id: 'Message from above'
+      }
     },
     {
       path: '/about',
-      name: 'About',
       component: About
     },
     {
       path: '/contact',
-      name: 'Conact',
       component: Contact
     }
   ]
