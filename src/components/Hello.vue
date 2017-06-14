@@ -2,6 +2,10 @@
   <div class="hello">
     <h1 class="page-header">{{ msg }}</h1>
     <p> God said: {{ id }}</p>
+    <div style="width:40%">
+      <canvas id="myChart"></canvas>
+    </div>
+    
   </div>
 </template>
 
@@ -13,6 +17,8 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App.'
     }
+  },
+  mounted () {
   }
 }
 </script>
