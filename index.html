@@ -53,11 +53,18 @@
       }
     };
 
-    window.onload =function(){
+    var displayGraph = function displayGraph(){
       var ctx = document.getElementById("myChart").getContext("2d");
-      window.myDoughnutChart = new Chart(ctx, config);
-      console.log(window.myDoughnutChart)
+      window.barChart = new Chart(ctx, config);
     }
+
+    window.onload =function(){
+      displayGraph();
+    }
+
+    window.displayGraph = displayGraph;
+
+
     </script>
   </body>
 </html>

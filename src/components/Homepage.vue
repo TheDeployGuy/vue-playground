@@ -1,8 +1,13 @@
 <template>
   <div class="homepage">
     <p> God said: {{ id }}</p>
-    <Chart :chartData="datacollection"></Chart>
-     <canvas id="myChart"></canvas>
+    <div style="width:40%">
+      <Chart :chartData="datacollection"></Chart>
+    </div>
+
+    
+      <canvas id="myChart"></canvas>
+    
     </div>
   </div>
 </template>
@@ -23,12 +28,15 @@ export default {
   beforeMount () {
     this.fillData()
   },
+  mounted () {
+    window.displayGraph()
+  },
   methods: {
     fillData () {
       this.datacollection = {
         labels: ['Red', 'Green', 'Blue'],
         datasets: [{
-          // label: ['Red', 'Green', 'Blue'],
+          labels: 'Sample Dataset',
           data: [10, 20, 30],
           backgroundColor: [
             'rgba(255, 0, 0, 1)',
