@@ -29,7 +29,8 @@ export default {
     this.fillData()
   },
   mounted () {
-    window.displayGraph()
+    console.log(document.getElementById('myChart'))
+    // window.displayGraph()
   },
   methods: {
     fillData () {
