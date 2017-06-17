@@ -1,9 +1,11 @@
 <template>
-<ul class="nav nav-sidebar">
-  <li><router-link to="/">Home</router-link></li>
-  <li><router-link to="/about">About</router-link></li>
-  <li><router-link to="/contact">Contact</router-link></li>
-</ul>
+<header>
+      <ul style="width:20%; margin-top:65px;" class="side-nav fixed">
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/about">About</router-link></li>
+        <li><router-link to="/contact">Contact</router-link></li>
+      </ul>      
+</header>
 </template>
 
 <script>
