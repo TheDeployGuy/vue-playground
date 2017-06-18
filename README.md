@@ -1,6 +1,6 @@
 # vue-playground
 
-> My Vue.js playground to mess around with it
+> My Vue.js playground.
 
 ## Useful links
 
