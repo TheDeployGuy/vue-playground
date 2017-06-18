@@ -1,6 +1,6 @@
 <template>
   <div class="homepage">
-    <p> God said: {{ id }}</p>
+    <h1>Homepage view</h1>
     <div style="width:40%">
       <Chart :chartData="datacollection"></Chart>
     </div>

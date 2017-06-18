@@ -1,6 +1,6 @@
 <template>
 <header>
-      <ul style="width:20%; margin-top:65px;" class="side-nav fixed">
+      <ul style="width:20%; margin-top:65px;" class="side-nav fixed hide-on-med-and-down">
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/about">About</router-link></li>
         <li><router-link to="/contact">Contact</router-link></li>

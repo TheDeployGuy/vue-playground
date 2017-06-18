@@ -1,15 +1,20 @@
 <template>
   <div id="app">
-    <Dashboard></Dashboard>
+    <Navbar></Navbar>
+    <Sidebar></Sidebar>
+    <div style="margin-left:25%; width:80%;">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-import Dashboard from '@/components/Dashboard'
+import Navbar from '@/components/Navbar'
+import Sidebar from '@/components/Sidebar'
 export default {
   name: 'app',
   components: {
-    Dashboard
+    Navbar, Sidebar
   }
 }
 </script>
