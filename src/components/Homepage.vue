@@ -11,6 +11,7 @@
 
 <script>
 import Chart from '@/components/Chart'
+import Store from '../store'
 export default {
   props: ['id'],
   name: 'homepage',
@@ -23,15 +24,27 @@ export default {
     }
   },
   beforeMount () {
-    this.fillData()
+    if (Store.graphConfig) {
+      Store.graphConfig.labels.push('Random')
+      Store.graphConfig.datasets[0].data.push(40)
+      this.datacollection = Store.graphConfig
+      console.log(this.datacollection.datasets[0].data)
+    } else {
+      this.fillData()
+    }
     this.connectToSocket()
   },
   mounted () {
     // window.displayGraph()
-    // setInterval(this.connectToSocket, 1000)
+    setInterval(this.fillData, 1000)
+  },
+  destroyed () {
+    console.log('Destroy')
+    Store.graphConfig = this.datacollection
   },
   methods: {
     fillData () {
+      console.log('Running...')
       this.datacollection = {
         labels: ['Red', 'Green', 'Blue'],
         datasets: [{
