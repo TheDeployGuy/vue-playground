@@ -25,7 +25,6 @@ export default HorizontalBar.extend({
     }
   },
   mounted () {
-    console.log('hit')
     this.renderChart(this.chartData, this.options)
   }
 })

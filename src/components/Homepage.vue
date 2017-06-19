@@ -24,9 +24,11 @@ export default {
   },
   beforeMount () {
     this.fillData()
+    this.connectToSocket()
   },
   mounted () {
     // window.displayGraph()
+    // setInterval(this.connectToSocket, 1000)
   },
   methods: {
     fillData () {
@@ -46,6 +48,15 @@ export default {
             'rgba(255, 206, 86, 1)'
           ]
         }]
+      }
+    },
+    connectToSocket () {
+      var websocket = new WebSocket('wss://echo.websocket.org')
+      websocket.onopen = function () {
+        websocket.send('SENT: Hello\n')
+      }
+      websocket.onmessage = function (s) {
+        console.log('Rec ' + s.data)
       }
     }
   }

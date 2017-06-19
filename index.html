@@ -4,75 +4,15 @@
     <meta charset="utf-8">
     <title>vue-playground</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Compiled and minified CSS -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-
+    
   </head>
   <body>
     <div id="app"></div>
 
-<script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
-    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-            
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
-
-    <script>
-    var config = {
-      type: 'bar',
-      data: {
-        datasets: [{
-          data: [10, 20, 30],
-          backgroundColor: [
-          'rgba(255, 0, 0, 1)',
-          'rgba(0, 255, 0, 1)',
-          'rgba(0, 0, 255, 1)',
-          ],
-        borderColor: [
-          'rgba(255,99,132,1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-        ]
-      }],
-        labels: [
-            'Red',
-            'Yellow',
-            'Blue'
-        ]
-      },
-      options: {
-        responsive: true,
-        animateScale: true,
-        'onClick':function(evt, item){
-          console.log(item);
-        },
-        scales: {
-          yAxes: [{
-              ticks: {
-                  beginAtZero: true
-              }
-          }]
-        }
-      }
-    };
-
-    var displayGraph = function displayGraph(){
-      var ctx = document.getElementById("myChart").getContext("2d");
-      window.barChart = new Chart(ctx, config);
-    }
-
-    window.onload =function(){
-      displayGraph();
-    }
-
-    window.displayGraph = displayGraph;
-
-
-    </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
   </body>
 </html>
