@@ -1,11 +1,12 @@
 <template>
   <div class="contact">
-    <h1>{{ msg }}</h1>
+    <p>Test value: {{ testValue }}</p>
   </div>
 </template>
 
 <script>
 export default {
+  props: ['testValue'],
   name: 'contact',
   data () {
     return {

@@ -1,16 +1,32 @@
 <template>
   <div class="about">
     <h1>{{ msg }}</h1>
+    <div v-if="posts.length > 0">
+       <contact :testValue="posts"></contact>
+    </div>
+    </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+import Contact from '@/components/Contact'
 export default {
   name: 'about',
+  components: {
+    Contact
+  },
   data () {
     return {
-      msg: 'Welcome to about!'
+      msg: 'Welcome to about!',
+      posts: []
     }
+  },
+  beforeMount () {
+    axios.get('http://jsonplaceholder.typicode.com/posts')
+      .then(response => {
+        this.posts = response.data
+      })
   },
   mounted () {
     console.log('Mounted')
