@@ -1,7 +1,7 @@
 <script>
-import { HorizontalBar, mixins } from 'vue-chartjs'
+import { Line, mixins } from 'vue-chartjs'
 
-export default HorizontalBar.extend({
+export default Line.extend({
   props: ['chartData'],
   mixins: [mixins.reactiveProp],
   data () {
